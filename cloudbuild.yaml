@@ -14,9 +14,8 @@ steps:
       - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-repo/my-app:$COMMIT_SHA'
   
   # 3. Desplegar la imagen en Cloud Run
-  - name: 'gcr.io/google.com/cloudsdk/cloud-sdk'
+  - name: 'gcr.io/cloud-builders/gcloud'
     args:
-      - 'gcloud'
       - 'run'
       - 'deploy'
       - 'my-app-service'
@@ -26,7 +25,7 @@ steps:
       - 'us-central1'
       - '--allow-unauthenticated'
 
-# Cuenta de servicio (fuera de steps, al mismo nivel)
+# Cuenta de servicio
 serviceAccount: 'projects/feisty-beacon-475415-q9/serviceAccounts/anthony@feisty-beacon-475415-q9.iam.gserviceaccount.com'
 
 # Opciones adicionales
