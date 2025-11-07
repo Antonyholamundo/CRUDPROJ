@@ -6,6 +6,7 @@ steps:
   - '-t'
   - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-repo/my-app:$COMMIT_SHA' # Ruta en Artifact Registry
   - '.'
+serviceAccount: 'projects/feisty-beacon-475415-q9/serviceAccounts/anthony@feisty-beacon-475415-q9.iam.gserviceaccount.com'
 
 # 2. Subir la imagen a Artifact Registry
 - name: 'gcr.io/cloud-builders/docker'
@@ -24,4 +25,5 @@ steps:
   - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-repo/my-app:$COMMIT_SHA'
   - '--region'
   - 'us-central1'
+
   - '--allow-unauthenticated'
