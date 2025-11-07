@@ -1,4 +1,4 @@
-# Usa una imagen base de Pyth
+# Usa una imagen base 
 FROM python:3.9-slim
 # Establece el directorio de 
 WORKDIR /app
@@ -6,5 +6,6 @@ WORKDIR /app
 COPY app.py .
 
 CMD ["python", "app.py"]
+
 
 
