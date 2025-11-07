@@ -4,7 +4,7 @@ import os
 import http.server
 import socketserver
 
-# El puerto que usará Cloud Run para exponer la aplicación
+# El puerto que usará Clou
 PORT = int(os.environ.get("PORT", 8080))
 
 # Define un manejador simple que siempre responde con el mismo texto
@@ -22,4 +22,5 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
 # Inicia el servidor
 print(f"Sirviendo en el puerto {PORT}")
 with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
+
     httpd.serve_forever()
