@@ -1,4 +1,4 @@
-# app.py
+# app.
 
 import os
 import http.server
@@ -24,3 +24,4 @@ print(f"Sirviendo en el puerto {PORT}")
 with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
 
     httpd.serve_forever()
+
