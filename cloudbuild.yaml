@@ -1,5 +1,5 @@
 steps:
-# 1. Construir la imagen de Docker
+# 1. Construir la imagen de Do
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
@@ -27,3 +27,4 @@ serviceAccount: 'projects/feisty-beacon-475415-q9/serviceAccounts/anthony@feisty
   - 'us-central1'
 
   - '--allow-unauthenticated'
+
